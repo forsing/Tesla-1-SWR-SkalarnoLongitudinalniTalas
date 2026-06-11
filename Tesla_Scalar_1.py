@@ -32,7 +32,7 @@ W_TALAS = 0.7
 W_FREQ = 0.3
 
 # Korak 2: primena talasa na CSV.
-CSV_PATH = Path("/Users/4c/Desktop/GHQ/data/loto7hh_4630_k46.csv")
+CSV_PATH = Path("/data/loto7hh_4630_k46.csv")
 MIN_BROJ = 1
 MAX_BROJ = 39
 KOLONE = [f"Num{i}" for i in range(1, 8)]
@@ -261,15 +261,15 @@ ukupna gustina energije: 124.7797101951
 
 
 Tesla Scalar - korak 2 (tezinski: talas + prava frekvencija)
-CSV: /Users/4c/Desktop/GHQ/data/loto7hh_4630_k46.csv | Izvlacenja: 4630 | tezine: talas=0.7 freq=0.3
+CSV: /data/loto7hh_4630_k46.csv | Izvlacenja: 4630 | tezine: talas=0.7 freq=0.3
 
 Top 10 brojeva po kombinovanom skoru (tezinski talas + frekvencija):
   34  skor=0.9229166667  freq=0.02694  (pojava=873)
-  35  skor=0.8187868171  freq=0.02601  (pojava=843)
+   x  skor=0.8187868171  freq=0.02601  (pojava=843)
   08  skor=0.7620207698  freq=0.02808  (pojava=910)
-  21  skor=0.6944234425  freq=0.02549  (pojava=826)
+   y  skor=0.6944234425  freq=0.02549  (pojava=826)
   13  skor=0.6710366593  freq=0.02555  (pojava=828)
-  31  skor=0.6134945057  freq=0.02561  (pojava=830)
+   z  skor=0.6134945057  freq=0.02561  (pojava=830)
   33  skor=0.6122469155  freq=0.02635  (pojava=854)
   37  skor=0.5777269684  freq=0.02654  (pojava=860)
   03  skor=0.5608625538  freq=0.02546  (pojava=825)
@@ -280,24 +280,24 @@ Tabela pravih frekvencija (opadajuce po freq, pa po broju):
   broj | pojava |   udeo
   -----+--------+--------
    08  |   910  | 0.02808
-   23  |   905  | 0.02792
+    x  |   905  | 0.02792
    34  |   873  | 0.02694
-   26  |   869  | 0.02681
+    y  |   869  | 0.02681
    37  |   860  | 0.02654
-   11  |   860  | 0.02654
+    z  |   860  | 0.02654
    32  |   857  | 0.02644
-   33  |   854  | 0.02635
+    x  |   854  | 0.02635
    22  |   851  | 0.02626
-   39  |   849  | 0.02620
+    y  |   849  | 0.02620
    29  |   848  | 0.02616
-   10  |   845  | 0.02607
+    z  |   845  | 0.02607
    35  |   843  | 0.02601
    09  |   843  | 0.02601
-   38  |   842  | 0.02598
+    x  |   842  | 0.02598
    07  |   842  | 0.02598
-   24  |   840  | 0.02592
+    y  |   840  | 0.02592
    25  |   839  | 0.02589
-   16  |   837  | 0.02583
+    z  |   837  | 0.02583
    31  |   830  | 0.02561
    13  |   828  | 0.02555
    05  |   828  | 0.02555
@@ -322,18 +322,18 @@ Tabela pravih frekvencija (opadajuce po freq, pa po broju):
 
 
 Predlozene kombinacije (rangirane po skoru kombinacije):
-  01. 06 13 22 25 34 35 39  skor_komb=4.1828743121
-  02. 07 08 13 23 24 25 34  skor_komb=4.1724896390
-  03. 08 12 17 18 23 33 34  skor_komb=3.9744379737
-  04. 02 11 16 25 26 34 39  skor_komb=3.7826283876
-  05. 17 25 28 29 31 33 34  skor_komb=3.7645748441
-  06. 10 11 14 21 23 32 34  skor_komb=3.5593504018
-  07. 04 11 21 25 30 33 37  skor_komb=3.4756849693
-  08. 06 07 13 30 32 37 39  skor_komb=3.4360797056
-  09. 02 05 08 13 19 30 39  skor_komb=3.1304011568
-  10. 09 10 11 29 30 33 38  skor_komb=2.8350171823
+  01. 06 x 22 y 34 z 39  skor_komb=4.1828743121
+  02. 07 x 13 y 24 z 34  skor_komb=4.1724896390
+  03. 08 x 17 y 23 z 34  skor_komb=3.9744379737
+  04. 02 x 16 y 26 z 39  skor_komb=3.7826283876
+  05. 17 x 28 y 31 z 34  skor_komb=3.7645748441
+  06. 10 x 14 y 23 z 34  skor_komb=3.5593504018
+  07. 04 x 21 y 30 z 37  skor_komb=3.4756849693
+  08. 06 x 13 y 32 z 39  skor_komb=3.4360797056
+  09. 02 x 08 y 19 z 39  skor_komb=3.1304011568
+  10. 09 x 11 y 30 z 38  skor_komb=2.8350171823
 
-Sacuvano: /Users/4c/Desktop/GHQ/Tesla/tesla_scalar_1.txt
+Sacuvano: /Tesla/tesla_scalar_1.txt
 
 """
 
@@ -385,8 +385,8 @@ ukupno ima 4630 x 7 = 32410 pojavljivanja, očekivano po broju je oko 831.
 
 Zato su ove vrednosti normalne:
 08 = 910 je stvarno jači po frekvenciji.
-34 = 873 nije najjači po frekvenciji, ali je prvi po skoru, znači talas ga je podigao.
-21 = 826, 13 = 828, 31 = 830 su skoro prosečni po frekvenciji, ali su visoko, opet znači da talas radi svoj deo.
+x = 873 nije najjači po frekvenciji, ali je prvi po skoru, znači talas ga je podigao.
+y = 826, z = 828, 31 = 830 su skoro prosečni po frekvenciji, ali su visoko, opet znači da talas radi svoj deo.
 Zaključak: odnos 0.7 talas / 0.3 freq nije ubio Teslinu ideju. 
 Frekvencija samo stabilizuje, a talas i dalje odlučuje.
 
@@ -409,11 +409,11 @@ Svaka kombinacija dobije svoj skor i da lista bude sortirana od najjače ka slab
 Zato je kombinacija 01 sada favorit, a deseta je najslabija od ponuđenih.
 
 Kombinacije su sad sortirane opadajuće po skor_komb: od 4.183 (prva) do 2.835 (deseta).
-Favorit je 01: 06 13 22 25 34 35 39 (skor_komb=4.1828).
-Najslabija ponuđena je 10: 09 10 11 29 30 33 38 (2.8350).
+Favorit je 01: 06 x 22 y 34 z 39 (skor_komb=4.1828).
+Najslabija ponuđena je 10: 09 x 11 y 30 z 38 (2.8350).
 
 Logika je konzistentna: 
 prva kombinacija ima najviše jakih brojeva po kombinovanom skoru 
-(34, 35, 25, 13, 39 su svi visoko u top listi), 
+(34, x, 25, y, 39 su svi visoko u top listi), 
 a deseta ima brojeve nižeg ranga.
 """
