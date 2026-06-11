@@ -5,6 +5,33 @@ SRBIN Nikola Tesla, za sva vremena, najveci naucnik sveta.
 
 
 """
+source ~/tesla_env/bin/activate
+
+Bitne verzije za tesla_env:
+
+Paket	Verzija
+python  3.11.13
+numpy   2.2.6
+scipy   1.15.3
+pandas  3.0.3
+matplotlib    3.10.9
+k-Wave-python 0.6.2
+pycharge      2.0.1
+jax        0.10.1
+jaxlib     0.10.1
+jaxtyping  0.3.7
+equinox    0.13.8
+lineax     0.1.1
+optimistix 0.1.0
+ml-dtypes
+(uz jax)
+opencv-python 4.13.0.92
+h5py          3.16.0
+"""
+
+
+
+"""
 Tesla_Scalar_1.py  —  SLW motor (cista fizika)
 
 Simulira skalarno-longitudinalni talas (SLW):
@@ -416,4 +443,26 @@ Logika je konzistentna:
 prva kombinacija ima najviše jakih brojeva po kombinovanom skoru 
 (34, x, 25, y, 39 su svi visoko u top listi), 
 a deseta ima brojeve nižeg ranga.
+"""
+
+
+
+"""
+Analiza — Tesla 1 (ručni SLW motor)
+
+Motor: d'Alamberova jednačina, konačne razlike, 1D talas u +x. Polje: max S ≈ 1.0, max|E_x| ≈ 0.101, ukupna energija ≈ 124.78. Mala |E_x| znači blag gradijent — talas je „mek", energija je raspoređena prilično glatko.
+
+Top brojevi (talas + freq, 0.7/0.3): 34 (0.923) · x (0.819) · 08 (0.762) · y (0.694) · 13 (0.671) · z (0.613) · 33 (0.612) · 37 (0.578) · 03 (0.561) · 25 (0.559)
+
+Šta nosi rang:
+
+08 je u top 3 i frekvencijski je #1 (910) → tu se talas i frekvencija slažu.
+21, x, 31 su frekvencijski prosečni/ispod (826/828/830), a visoko su → talas ih je podigao (ne-frekvencijski signal radi).
+35 je #2 po skoru a frekvencijski je tek sredina (843) → opet talas.
+Favorit kombinacija: 06 x 22 y 34 z 39 (skor_komb = 4.1828). Najslabija ponuđena: 09 x 11 y 30 z 38 (2.8350).
+
+Zaključak: Tesla 1 je „mekan" motor — diferencijacija među brojevima je umerena (skorovi se glatko spuštaju). 
+Dobar je kao referentna osnova: 
+dokazuje da ne-frekvencijski signal postoji, ali bez oštrih vrhova. 
+To je očekivano za jednostavan 1D talas.
 """
