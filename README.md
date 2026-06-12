@@ -1,3 +1,10 @@
+"""
+SRBIN Nikola Tesla, za sva vremena, najveci naucnik sveta.
+
+SERBIAN Nikola Tesla, for all time, the greatest scientist in the world.
+"""
+
+
 
 | Paket                       | Verzija |
 | --------------------------- | ------- |
